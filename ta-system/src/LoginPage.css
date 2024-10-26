@@ -1,106 +1,133 @@
-/* General Page Style */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-  }
-  
-  .login-page {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+}
+/* General text styling for the logo */
+.uf-logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Georgia', serif; /* Similar to the font style used */
+}
+
+.uf-logo h1 {
+  font-size: 20px; /* Large font size for 'UF' */
+  color: #003366;  /* Dark blue color */
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+  border-right: 3px solid #f58220; /* Orange vertical line */
+}
+
+.uf-logo h2 {
+  font-size: 25px; /* Smaller font for 'Authentication' */
+  color: #003366;
+  font-style: italic;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.uf-logo span {
+  display: block;
+  font-size: 22px; /* Adjusted size for 'UNIVERSITY OF FLORIDA' */
+  color: #003366;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+
+.container {
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+
+.logo h1 {
+  font-size: 24px;
+  color: #003366;
+  margin: 0;
+}
+
+.logo h2 {
+  font-size: 20px;
+  color: #f58220;
+  margin: 0;
+}
+
+.nav a {
+  margin-right: 20px;
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-content {
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.notice {
+  background-color: #fff6d8;
+  border: 1px solid #ffcc00;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form{
+  text-align: center;
+}
+.login-box {
     padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Header */
-  .login-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e0e0e0;
-  }
-  
-  .uf-logo h1 {
-    color: #00539f;
-    margin: 0;
-  }
-  
-  .uf-logo h2 {
-    font-size: 1.2em;
-    margin: 5px 0 0 0;
-  }
-  
-  .uf-logo h3 {
-    font-size: 0.8em;
-    color: #777;
-    margin: 0;
-  }
-  
-  .login-nav a {
-    margin: 0 10px;
-    color: #00539f;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .login-nav a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Content Boxes */
-  .notice-box,
-  .disclaimer-box {
-    border: 1px solid #ffa500;
-    padding: 15px;
-    background-color: #fff8e5;
-    margin-bottom: 20px;
-    font-size: 0.9em;
-    line-height: 1.4em;
-  }
-  
-  .disclaimer-box {
-    border: 1px solid #00539f;
-    background-color: #f0f6ff;
-  }
-  
-  /* Login Form */
-  .login-box {
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    margin-bottom: 20px;
-  }
-  
-  .form-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #888888;
-  }
-  
-  .form-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    font-size: 1em;
-  }
-  
-  .login-button {
-    background-color: #ff6f00;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .login-button:hover {
-    background-color: #ff8c1a;
-  }
-  
+    background-color: #f3f3f3;
+    text-align: center;
+}
+
+.login-box h2 {
+  margin-top: 0;
+  color: #003366;
+  text-align: center;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box label {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.login-box input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-box button {
+  background-color: #f58220;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.privacy-notice {
+  grid-column: span 2;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 12px;
+  background-color: #eef;
+}
