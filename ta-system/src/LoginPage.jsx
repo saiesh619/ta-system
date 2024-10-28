@@ -1,7 +1,12 @@
 import React from "react";
 import "./LoginPage.css";
 
-const LoginPage = () => {
+const LoginPage = ({ onLogin }) => {
+  const handleLoginClick = (e) => {
+    e.preventDefault(); // Prevent form from submitting and refreshing the page
+    console.log("clicked");
+    onLogin(); // Redirect to main page by updating isLoggedIn state in App
+  };
   return (
     <div>
       {/* Top Navigation Bar */}
@@ -36,10 +41,10 @@ const LoginPage = () => {
           <h2>UNIVERSITY OF FLORIDA</h2>
         </div>
         <nav className="nav">
-          <a href="#">CHANGE PASSWORD</a>
-          <a href="#">FORGOT/RESET PASSWORD</a>
-          <a href="#">CREATE ACCOUNT</a>
-          <a href="#">TROUBLE SIGNING ON?</a>
+          <a href="#">Option</a>
+          <a href="#">Option</a>
+          <a href="#">Option</a>
+          <a href="#">Option</a>
         </nav>
       </div>
 
@@ -66,7 +71,7 @@ const LoginPage = () => {
                 />
                 <label htmlFor="password">Password</label>
                 <input type="password" id="password" placeholder="Password" />
-                <button type="submit">LOGIN</button>
+                <button type="submit" onClick={handleLoginClick}>LOGIN</button>
               </form>
             </div>
           </div>
