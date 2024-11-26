@@ -1,45 +1,56 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
-import "./LoginPage";
 
 const Navbar = () => {
   return (
-    <div>
-    <div class="top-nav">
-    <div class="top-nav-content">
-      <div class="left-section-top">
-        <div class="uf-logo-main">UF</div>
-        <nav class="main-nav-links">
-          <a href="#">NEWS</a>
-          <a href="#">CALENDAR</a>
-          <a href="#">OFFICES & SERVICES</a>
-          <a href="#">DIRECTORY</a>
-          <a href="#">GIVING</a>
-          <a href="#">UF HEALTH</a>
-          <a href="#">UF IFAS</a>
-        </nav>
+    <header>
+      {/* Top Navigation Bar */}
+      <div className="top-nav">
+        <div className="top-nav-content">
+          {/* Left Section */}
+          <div className="left-section-top">
+            <div className="uf-logo-main">UF</div>
+            <nav className="main-nav-links">
+              <a href="#">NEWS</a>
+              <a href="#">CALENDAR</a>
+              <a href="#">OFFICES & SERVICES</a>
+              <a href="#">DIRECTORY</a>
+              <a href="#">GIVING</a>
+              <a href="#">UF HEALTH</a>
+              <a href="#">UF IFAS</a>
+            </nav>
+          </div>
+
+          {/* Right Section */}
+          <div className="right-section-top">
+            <div className="welcome-message">
+              Welcome to UF <span className="dropdown-icon">▼</span>
+            </div>
+            <div className="search-icon">🔍</div>
+          </div>
+        </div>
       </div>
 
-      <div class="right-section-top">
-        <div class="welcome-message">
-          Welcome to UF <span class="dropdown-icon">▼</span>
+      {/* Secondary Navigation Bar */}
+      <div className="secondary-nav">
+        <div className="secondary-nav-content">
+          {/* University Branding */}
+          <div className="uf-logo">
+            <h1 className="university-title">UNIVERSITY OF FLORIDA</h1>
+            <h2 className="ta-system-title">TA System</h2>
+          </div>
+
+          {/* Navigation Links */}
+          <nav className="nav">
+            <Link to="/profile" className="nav-link">Profile</Link>
+            <Link to="/application-status" className="nav-link">
+              Application Status
+            </Link>
+          </nav>
         </div>
-        <div class="search-icon">🔍</div>
       </div>
-    </div>
-  </div>
-    <div className="secondary-nav">
-    <div className="uf-logo">
-      <h1>UNIVERSITY OF FLORIDA</h1>
-      <h2>TA System</h2>
-    </div>
-    <nav className="nav">
-      <a href="#">Profile</a>
-      <a href="#">Application Status</a>
-    </nav>
-  </div>
-  </div>
-  
+    </header>
   );
 };
 

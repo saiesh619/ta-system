@@ -2,102 +2,86 @@ import React from "react";
 import "./LoginPage.css";
 
 const LoginPage = ({ onLogin }) => {
-  const handleLoginClick = (e) => {
-    e.preventDefault(); // Prevent form from submitting and refreshing the page
-    console.log("clicked");
-    onLogin(); // Redirect to main page by updating isLoggedIn state in App
-  };
   return (
-    <div>
-      {/* Top Navigation Bar */}
-      <div class="top-nav">
-        <div class="top-nav-content">
-          <div class="left-section-top">
-            <div class="uf-logo-main">UF</div>
-            <nav class="main-nav-links">
-              <a href="#">NEWS</a>
-              <a href="#">CALENDAR</a>
-              <a href="#">OFFICES & SERVICES</a>
-              <a href="#">DIRECTORY</a>
-              <a href="#">GIVING</a>
-              <a href="#">UF HEALTH</a>
-              <a href="#">UF IFAS</a>
-            </nav>
-          </div>
-
-          <div class="right-section-top">
-            <div class="welcome-message">
-              Welcome to UF <span class="dropdown-icon">▼</span>
-            </div>
-            <div class="search-icon">🔍</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Secondary Navigation Bar */}
-      <div className="secondary-nav">
-        <div className="uf-logo">
-          <h1>Authentication</h1>
-          <h2>UNIVERSITY OF FLORIDA</h2>
-        </div>
-        <nav className="nav">
-          <a href="#">Option</a>
-          <a href="#">Option</a>
-          <a href="#">Option</a>
-          <a href="#">Option</a>
+    <div className="login-page">
+      {/* Top Navigation */}
+      <div className="top-nav">
+        <div className="uf-logo">UF</div>
+        <nav className="main-nav">
+          <a href="#">NEWS</a>
+          <a href="#">CALENDAR</a>
+          <a href="#">OFFICES & SERVICES</a>
+          <a href="#">DIRECTORY</a>
+          <a href="#">GIVING</a>
+          <a href="#">UF HEALTH</a>
+          <a href="#">UF IFAS</a>
         </nav>
+        <div className="right-nav">
+          <span>Welcome to UF</span>
+          <span className="dropdown-icon">▼</span>
+          <span className="search-icon">🔍</span>
+        </div>
       </div>
 
       {/* Main Content */}
-      <div className="container">
-        <div className="main-content">
-          <div className="left-section">
-            <div className="notice-box">
-              <p>
-                NOTE: It has been brought to our attention that some browsers
-                are retaining and attempting to use old session cookies. This is
-                causing some users to have to authenticate more often than
-                normal. Please clear your browser's cache and cookies to fix
-                this issue.
-              </p>
-            </div>
-            <div className="login-box">
-              <form>
-                <label htmlFor="username">Username</label>
-                <input
-                  type="text"
-                  id="username"
-                  placeholder="GatorLink Username"
-                />
-                <label htmlFor="password">Password</label>
-                <input type="password" id="password" placeholder="Password" />
-                <button type="submit" onClick={handleLoginClick}>LOGIN</button>
-              </form>
-            </div>
+      <div className="login-container">
+        <h1>Authentication</h1>
+        <h2>UNIVERSITY OF FLORIDA</h2>
+
+        <div className="login-box">
+          <div className="login-warning">
+            <p>
+              <strong>NOTE:</strong> Some browsers are retaining old session
+              cookies. This may require frequent authentication. Clear your
+              browser cache to fix this issue.
+            </p>
           </div>
-          <div className="right-section">
-            <div className="privacy-notice">
-              <p>
-                You are logging in to a University of Florida (UF) information
-                system and agree to comply with the UF Acceptable Use Policy and
-                Guidelines. Unauthorized use of this system is prohibited and
-                may subject the user to criminal and civil penalties. UF may
-                monitor computer and network activities, and the user should
-                have limited expectations of privacy.
-              </p>
-            </div>
-          </div>
+
+          <form
+            onSubmit={(e) => {
+              e.preventDefault(); // Prevent page reload
+              onLogin(); // Trigger login and navigation
+            }}
+          >
+            <label htmlFor="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="GatorLink Username"
+              required
+            />
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <button type="submit" className="login-button">
+              LOGIN
+            </button>
+          </form>
+        </div>
+
+        <div className="login-info">
+          <p>
+            You are logging into a University of Florida system. Unauthorized
+            use is prohibited and may result in penalties.
+          </p>
         </div>
       </div>
 
-      {/* Footer Section */}
-      <div className="footer">
-        <div className="footer-content">
-          <a href="http://www.ufl.edu" className="footer-logo">
-            University of Florida
-          </a>
+      {/* Footer */}
+      <footer className="login-footer">
+        <div>
+          <p>RESOURCES</p>
+          <p>CAMPUS</p>
+          <p>WEBSITE</p>
         </div>
-      </div>
+        <div className="uf-branding">
+          <h2>UNIVERSITY of FLORIDA</h2>
+        </div>
+      </footer>
     </div>
   );
 };
