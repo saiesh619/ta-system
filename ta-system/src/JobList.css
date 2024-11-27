@@ -1,46 +1,75 @@
+/* Job List Container */
 .job-list {
   width: 100%;
-}
-
-.job-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between; /* Align cards with space in between */
-}
-
-.job-card {
-  width: 220px;
-  height: 220px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.job-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.job-card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.job-card p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 8px;
+  padding: 40px 20px;
+  background-color: #f4f7fb; /* Light background for the entire job list */
 }
 
 .job-list h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
   text-align: center;
+  color: #333;
+}
+
+/* Container for job cards */
+.job-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Increased gap for better spacing between cards */
+  justify-content: center; /* Center the cards */
+}
+
+/* Individual job card */
+.job-card {
+  width: 250px; /* Adjusted width for better proportions */
+  height: auto;
+  background-color: #ffffff; /* Clean white background */
+  border: 1px solid #e0e4e7;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-10px); /* Slight lift effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+}
+
+/* Job card title */
+.job-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Job card date */
+.job-card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Short description styling */
+.job-card p.short-description {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .job-cards-container {
+    justify-content: center;
+  }
+
+  .job-card {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 350px; /* Set a max width to avoid cards getting too wide */
+  }
 }

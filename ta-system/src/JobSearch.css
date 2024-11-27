@@ -57,7 +57,7 @@
 }
 
 .apply-button {
-  background-color: #28a745;
+  background-color: #4a7ea7;
   color: white;
   border: none;
   border-radius: 4px;
@@ -70,7 +70,7 @@
 }
 
 .apply-button:hover {
-  background-color: #218838;
+  background-color: #072753;
   transform: scale(1.05);
 }
 
@@ -281,4 +281,3 @@
   background-color: #357abd;
   transform: scale(1.05);
 }
-
