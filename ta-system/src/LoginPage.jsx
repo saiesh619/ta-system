@@ -105,9 +105,7 @@ const LoginPage = ({ onLogin }) => {
       {/* Footer Section */}
       <div className="footer">
         <div className="footer-content">
-          <a href="http://www.ufl.edu" className="footer-logo">
-            University of Florida
-          </a>
+          <a href="http://www.ufl.edu" className="footer-logo"></a>
         </div>
       </div>
     </div>
