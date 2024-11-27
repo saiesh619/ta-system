@@ -96,6 +96,7 @@ body {
 }
 
 /* Main content container */
+
 .container {
   display: flex;
   justify-content: center;
@@ -210,4 +211,98 @@ body {
   font-weight: bold;
   text-decoration: none;
   color: white;
+}
+
+.password {
+  font-weight: 600;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.footer-bottom {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows the items to wrap on smaller screens */
+}
+
+.footer-contact-wrap {
+  flex: 1;
+  min-width: 250px; /* To make it responsive */
+}
+
+.footer-contact-wrap .social-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.footer-contact-wrap .social-nav li {
+  margin-bottom: 10px;
+}
+
+.footer-contact-wrap .address {
+  margin-top: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  flex: 3;
+  flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+  gap: 20px;
+}
+
+.footer-menu {
+  flex: 1 1 30%; /* Flex-grow, flex-shrink, and flex-basis to make 3 equal columns */
+  min-width: 200px; /* Minimum width to prevent columns from getting too small */
+}
+
+.footer-menu h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu ul li {
+  margin-bottom: 10px;
+}
+
+.footer-menu ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column; /* Stack columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-contact-wrap,
+  .footer-columns {
+    flex: 1 1 100%;
+  }
 }

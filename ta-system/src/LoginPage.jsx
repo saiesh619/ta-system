@@ -42,6 +42,7 @@ const LoginPage = ({ onLogin }) => {
       </div>
 
       {/* Main Content */}
+
       <div className="container">
         <div className="main-content">
           <div className="left-section">
@@ -66,14 +67,18 @@ const LoginPage = ({ onLogin }) => {
                   onLogin(); // Trigger login and navigation
                 }}
               >
-                <label htmlFor="username">Username</label>
+                <label className="username" htmlFor="username">
+                  Username
+                </label>
                 <input
                   type="text"
                   id="username"
                   placeholder="GatorLink Username"
                   required
                 />
-                <label htmlFor="password">Password</label>
+                <label className="password" htmlFor="password">
+                  Password
+                </label>
                 <input
                   type="password"
                   id="password"
@@ -106,6 +111,167 @@ const LoginPage = ({ onLogin }) => {
       <div className="footer">
         <div className="footer-content">
           <a href="http://www.ufl.edu" className="footer-logo"></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="footer-contact-wrap">
+              <a href="http://www.ufl.edu" class="footer-logo icon-svg">
+                <svg>
+                  <use href="/idp/img/spritemap.svg#facebook"></use>
+                </svg>
+                <span class="visuallyhidden">University of Florida</span>
+              </a>
+
+              <ul class="social-nav">
+                <li>
+                  <a
+                    href="http://www.facebook.com/uflorida/"
+                    class="btn-circle icon-svg icon-facebook"
+                  >
+                    <svg>
+                      <use href="/idp/img/spritemap.svg#facebook"></use>
+                    </svg>
+                    <span class="visuallyhidden">Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/UF/"
+                    class="btn-circle icon-svg icon-twitter"
+                  >
+                    <svg>
+                      <use href="/idp/img/spritemap.svg#twitter"></use>
+                    </svg>
+                    <span class="visuallyhidden">Twitter</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/uflorida/"
+                    class="btn-circle icon-svg icon-instagram"
+                  >
+                    <svg>
+                      <use href="/idp/img/spritemap.svg#instagram"></use>
+                    </svg>
+                    <span class="visuallyhidden">Instagram</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://www.youtube.com/user/universityofflorida/"
+                    class="btn-circle icon-svg icon-youtube"
+                  >
+                    <svg>
+                      <use href="/idp/img/spritemap.svg#youtube"></use>
+                    </svg>
+                    <span class="visuallyhidden">YouTube</span>
+                  </a>
+                </li>
+              </ul>
+
+              <p class="address">
+                University of Florida
+                <br />
+                Gainesville, FL 32611
+                <br />
+                (352) 392-3261
+                <br />
+                <a href="https://assistive.usablenet.com/tt/login.ufl.edu">
+                  Text-only Version
+                </a>
+              </p>
+            </div>
+
+            <div class="footer-columns">
+              <div class="footer-menu">
+                <h2>
+                  Resources
+                  <span class="icon-svg icon-caret">
+                    <svg>
+                      <use href="/idp/img/spritemap.svg#caret"></use>
+                    </svg>
+                  </span>
+                </h2>
+                <ul>
+                  <li>
+                    <a href="https://one.uf.edu/">ONE.UF</a>
+                  </li>
+                  <li>
+                    <a href="https://webmail.ufl.edu/">Webmail</a>
+                  </li>
+                  <li>
+                    <a href="https://my.ufl.edu/ps/signon.html">myUFL</a>
+                  </li>
+                  <li>
+                    <a href="https://lss.at.ufl.edu/">e-Learning</a>
+                  </li>
+                  <li>
+                    <a href="https://directory.ufl.edu/">Directory</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer-menu">
+                <h2>
+                  Campus
+                  <span class="icon-svg icon-caret">
+                    <svg>
+                      <use href="/idp/img/spritemap.svg#caret"></use>
+                    </svg>
+                  </span>
+                </h2>
+                <ul>
+                  <li>
+                    <a href="http://ufweather.org/">Weather</a>
+                  </li>
+                  <li>
+                    <a href="http://campusmap.ufl.edu/">Campus Map</a>
+                  </li>
+                  <li>
+                    <a href="http://virtualtour.ufl.edu/">Student Tours</a>
+                  </li>
+                  <li>
+                    <a href="https://catalog.ufl.edu/ugrad/current/Pages/dates-and-deadlines.aspx">
+                      Academic Calendar
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://calendar.ufl.edu/">Events</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer-menu">
+                <h2>
+                  Website
+                  <span class="icon-svg icon-caret">
+                    <svg>
+                      <use href="/idp/img/spritemap.svg#caret"></use>
+                    </svg>
+                  </span>
+                </h2>
+                <ul>
+                  <li>
+                    <a href="http://www.ufl.edu/websites/">Website Listing</a>
+                  </li>
+                  <li>
+                    <a href="http://accessibility.ufl.edu/">Accessibility</a>
+                  </li>
+                  <li>
+                    <a href="http://privacy.ufl.edu/privacystatement.html">
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://regulations.ufl.edu/">Regulations</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
