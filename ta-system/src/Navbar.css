@@ -6,17 +6,18 @@ header {
 
 /* Top Navigation Bar */
 .top-nav {
-  background-color: #003366; /* UF blue */
+  background-color: #d6581d; /* UF orange */
   color: white;
   padding: 10px 20px;
 }
 
 .top-nav-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  justify-content: space-between;
   margin: 0 auto;
+  padding: 0 20px;
+  font-family: "Georgia", serif;
 }
 
 .left-section-top {
