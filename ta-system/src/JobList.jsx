@@ -14,7 +14,8 @@ const JobList = ({ jobs = [], onJobSelect }) => {
           >
             <h3>{job.title}</h3>
             <p>
-              <strong>Opening Date:</strong> {new Date(job.postedDate).toLocaleDateString()}
+              <strong>Opening Date:</strong>{" "}
+              {new Date(job.postedDate).toLocaleDateString()}
             </p>
             <p>{job.shortDescription || "Click to view details"}</p>
           </div>

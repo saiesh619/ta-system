@@ -25,9 +25,16 @@ const JobDetails = ({ jobs, appliedJobs, onApply }) => {
   return (
     <div className="job-details-container">
       <h1>{job.title}</h1>
-      <p><strong>Discipline:</strong> {job.discipline}</p>
-      <p><strong>Posted On:</strong> {new Date(job.postedDate).toLocaleDateString()}</p>
-      <p><strong>Description:</strong> {job.description}</p>
+      <p>
+        <strong>Discipline:</strong> {job.discipline}
+      </p>
+      <p>
+        <strong>Posted On:</strong>{" "}
+        {new Date(job.postedDate).toLocaleDateString()}
+      </p>
+      <p>
+        <strong>Description:</strong> {job.description}
+      </p>
       {!applied ? (
         <button className="apply-button" onClick={handleApply}>
           Apply

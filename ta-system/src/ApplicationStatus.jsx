@@ -24,7 +24,8 @@ const ApplicationStatus = ({ jobs, appliedJobs }) => {
               </div>
               <div className="card-body">
                 <p>
-                  <strong>Application Date:</strong> {new Date().toLocaleDateString()}
+                  <strong>Application Date:</strong>{" "}
+                  {new Date().toLocaleDateString()}
                 </p>
                 <p>
                   <strong>Status:</strong>{" "}

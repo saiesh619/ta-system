@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import LoginPage from "./LoginPage";
 import Navbar from "./Navbar";
 import JobSearch from "./JobSearch";
@@ -89,7 +94,9 @@ const App = () => {
               />
               <Route
                 path="/application-status"
-                element={<ApplicationStatus jobs={jobs} appliedJobs={appliedJobs} />}
+                element={
+                  <ApplicationStatus appliedJobs={appliedJobs} jobs={jobs} />
+                }
               />
             </Routes>
           </>

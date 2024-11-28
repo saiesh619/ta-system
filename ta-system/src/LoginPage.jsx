@@ -33,7 +33,7 @@ const LoginPage = ({ onLogin }) => {
       <div className="secondary-nav">
         {/* <div className="uf-logo"></div> */}
         <nav className="nav">
-          <a href="#"> university of florida</a>
+          <a href="#">UNIVERSITY OF FLORIDA</a>
           <a href="#">CHANGE PASSWORD</a>
           <a href="#">FORGOT/RESET PASSWORD</a>
           <a href="#">CREATE ACCOUNT</a>
@@ -117,74 +117,6 @@ const LoginPage = ({ onLogin }) => {
       <div class="footer-bottom">
         <div class="container">
           <div class="row">
-            <div class="footer-contact-wrap">
-              <a href="http://www.ufl.edu" class="footer-logo icon-svg">
-                <svg>
-                  <use href="/idp/img/spritemap.svg#facebook"></use>
-                </svg>
-                <span class="visuallyhidden">University of Florida</span>
-              </a>
-
-              <ul class="social-nav">
-                <li>
-                  <a
-                    href="http://www.facebook.com/uflorida/"
-                    class="btn-circle icon-svg icon-facebook"
-                  >
-                    <svg>
-                      <use href="/idp/img/spritemap.svg#facebook"></use>
-                    </svg>
-                    <span class="visuallyhidden">Facebook</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/UF/"
-                    class="btn-circle icon-svg icon-twitter"
-                  >
-                    <svg>
-                      <use href="/idp/img/spritemap.svg#twitter"></use>
-                    </svg>
-                    <span class="visuallyhidden">Twitter</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://instagram.com/uflorida/"
-                    class="btn-circle icon-svg icon-instagram"
-                  >
-                    <svg>
-                      <use href="/idp/img/spritemap.svg#instagram"></use>
-                    </svg>
-                    <span class="visuallyhidden">Instagram</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="http://www.youtube.com/user/universityofflorida/"
-                    class="btn-circle icon-svg icon-youtube"
-                  >
-                    <svg>
-                      <use href="/idp/img/spritemap.svg#youtube"></use>
-                    </svg>
-                    <span class="visuallyhidden">YouTube</span>
-                  </a>
-                </li>
-              </ul>
-
-              <p class="address">
-                University of Florida
-                <br />
-                Gainesville, FL 32611
-                <br />
-                (352) 392-3261
-                <br />
-                <a href="https://assistive.usablenet.com/tt/login.ufl.edu">
-                  Text-only Version
-                </a>
-              </p>
-            </div>
-
             <div class="footer-columns">
               <div class="footer-menu">
                 <h2>
