@@ -126,3 +126,12 @@ header {
     gap: 10px;
   }
 }
+.university-link {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Keeps the text color as it is */
+}
+
+.university-link:hover {
+  text-decoration: none; /* Ensures no underline appears on hover */
+  cursor: pointer; /* Changes cursor to pointer to indicate interactivity */
+}

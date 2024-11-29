@@ -1,4 +1,3 @@
-/* General Container */
 .job-search-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -18,25 +17,25 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 300px;
   text-align: center;
-  overflow: hidden; /* Prevent overflow of content */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .job-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .job-card h3 {
   margin: 0 0 12px;
-  font-size: 20px;
+  font-size: 18px;
   color: #333;
 }
 
@@ -46,16 +45,7 @@
   color: #555;
 }
 
-.applied-tag {
-  display: inline-block;
-  background-color: #d1f7d6;
-  color: #4caf50;
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 4px;
-  margin-top: 8px;
-}
-
+/* Apply Button */
 .apply-button {
   background-color: #4a7ea7;
   color: white;
@@ -79,17 +69,32 @@
   cursor: not-allowed;
 }
 
+/* Applied Tag */
+.applied-tag {
+  background-color: #d1f7d6;
+  color: #4caf50;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* View Details */
 .view-details {
   font-size: 14px;
   color: #007bff;
   text-decoration: none;
   margin-top: 10px;
+  transition: color 0.3s ease;
 }
 
 .view-details:hover {
+  color: #0056b3;
   text-decoration: underline;
 }
 
+/* Job Hover Details */
 .job-hover {
   background-color: #f3f3f3;
   padding: 8px;
@@ -103,6 +108,14 @@
 
 .job-hover p {
   margin: 4px 0;
+}
+
+/* Job Actions Section */
+.applied-section {
+  display: flex;
+  flex-direction: column; /* Stack Applied and View Details vertically */
+  align-items: center; /* Center-align content */
+  gap: 8px; /* Add space between Applied tag and View Details */
 }
 
 /* Search Filters */
@@ -131,27 +144,50 @@
 .chatbot-wrapper {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 30px;
   z-index: 1000;
 }
 
 /* Floating Chatbot Toggle Button */
 .chatbot-toggle {
-  background-color: #4a90e2;
+  background-color: #2d86ca;
   color: white;
   border: none;
   border-radius: 50%;
   width: 60px;
   height: 60px;
   font-size: 24px;
+  position: relative; /* For the notification */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .chatbot-toggle:hover {
-  background-color: #357abd;
+  background-color: #0056b3;
   transform: scale(1.1);
+}
+
+/* Chatbot Notification */
+.chatbot-toggle::after {
+  content: "Hi, click on me!";
+  position: absolute;
+  top: -30px; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4a7ea7;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.chatbot-toggle:hover::after {
+  background-color: #d6581d;
+  color: white;
 }
 
 /* Chatbot Container */
@@ -159,35 +195,37 @@
   position: fixed;
   bottom: 90px;
   right: 20px;
-  width: 320px;
+  width: 360px;
   max-height: 500px;
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 /* Chatbot Header */
 .chatbot-header {
-  background-color: #4a90e2;
+  background-color: #4a7ea7;
   color: white;
-  padding: 12px;
+  padding: 12px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
   font-weight: bold;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 .chatbot-close {
   background: none;
   border: none;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   transition: color 0.2s ease;
 }
@@ -200,84 +238,97 @@
 .chat-messages {
   flex: 1;
   overflow-y: auto;
-  padding: 10px;
+  padding: 10px 16px;
   background-color: #f9f9f9;
   font-size: 14px;
+  line-height: 1.5;
 }
 
 .chat-message {
   margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 4px;
+  padding: 10px 12px;
+  border-radius: 8px;
   max-width: 80%;
+  word-wrap: break-word;
 }
 
 .chat-message.user {
   background-color: #e6f7ff;
+  color: #0056b3;
   text-align: right;
   margin-left: auto;
 }
 
 .chat-message.bot {
   background-color: #f1f1f1;
+  color: #333;
   text-align: left;
   margin-right: auto;
 }
 
 /* Chat Input Container */
 .chat-input-container {
-  padding: 10px;
+  padding: 10px 16px;
   background-color: #fff;
   border-top: 1px solid #ddd;
+  display: flex;
+  gap: 8px;
 }
 
 .chat-input {
-  width: 100%;
+  flex: 1;
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 14px;
-  margin-bottom: 10px;
   outline: none;
+  transition: border-color 0.3s ease;
 }
 
-.chat-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
+.chat-input:focus {
+  border-color: #4a7ea7;
 }
 
-.chat-option-button {
-  flex: 1;
-  background-color: white;
-  border: 1px solid #4a90e2;
-  border-radius: 4px;
-  padding: 10px;
-  text-align: center;
-  color: #4a90e2;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.chat-option-button:hover {
-  background-color: #4a90e2;
-  color: white;
-}
-
-/* Chat Send Button */
 .chat-send-button {
-  background-color: #4a90e2;
+  background-color: #4a7ea7;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 10px 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .chat-send-button:hover {
-  background-color: #357abd;
+  background-color: #639cc8;
+  transform: scale(1.05);
+}
+
+/* Chat Options */
+.chat-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 16px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.chat-option-button {
+  flex: 1;
+  background-color: #eaf3f7;
+  color: #4a7ea7;
+  border: 1px solid #4a7ea7;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.chat-option-button:hover {
+  background-color: #cde1e9;
+  color: #2e5c76;
   transform: scale(1.05);
 }
