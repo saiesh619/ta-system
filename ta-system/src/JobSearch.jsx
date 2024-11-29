@@ -117,7 +117,10 @@ const JobSearch = ({ appliedJobs, jobs, onApply }) => {
               ) : (
                 <button
                   className="apply-button"
-                  onClick={() => onApply(job.id)}
+                  onClick={() => {
+                    console.log(`Applying for job ID: ${job.id}`);
+                    onApply(job.id); // Trigger the onApply function
+                  }}
                 >
                   Apply
                 </button>

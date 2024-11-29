@@ -52,6 +52,9 @@ const App = () => {
   const handleApplyJob = (jobId) => {
     if (!appliedJobs.includes(jobId)) {
       setAppliedJobs((prevAppliedJobs) => [...prevAppliedJobs, jobId]);
+      console.log(`Job ${jobId} applied successfully!`);
+    } else {
+      console.log(`Job ${jobId} is already applied.`);
     }
   };
 
@@ -82,6 +85,7 @@ const App = () => {
                       jobs={jobs}
                       appliedJobs={appliedJobs}
                       onFindJob={handleFindJobClick}
+                      onApply={handleApplyJob}
                     />
                     {showJobList && <JobList />}
                   </>
