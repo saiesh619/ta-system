@@ -1,143 +1,130 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  .application-status-page {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 20px;
-  }
-  
-  /* Header */
-  .status-header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .status-header h1 {
-    font-size: 2em;
-    color: #003366; /* UF Blue */
-    margin-bottom: 10px;
-  }
-  
-  .status-header p {
-    font-size: 1em;
-    color: #666;
-  }
-  
-  /* Section Headings */
-  .pending-approvals h2,
-  .archived-applications h2 {
-    font-size: 1.5em;
-    color: #003366; /* UF Blue */
-    margin-bottom: 20px;
-  }
-  
-  /* Application Cards Container */
-  .status-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  /* Individual Application Card */
-  .application-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .application-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Card Header */
-  .card-header h2 {
-    font-size: 1.5em;
-    color: #003366; /* UF Blue */
-    margin-bottom: 5px;
-  }
-  
-  .card-header p {
-    font-size: 1em;
-    color: #666;
-  }
-  
-  /* Card Body */
-  .card-body p {
-    font-size: 0.95em;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .status-tag {
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-transform: uppercase;
-  }
-  
-  .status-tag.pending {
-    background-color: #ffeeba; /* Light Yellow */
-    color: #856404; /* Dark Yellow */
-  }
-  
-  .status-tag.accepted {
-    background-color: #d4edda; /* Light Green */
-    color: #155724; /* Dark Green */
-  }
-  
-  .status-tag.rejected {
-    background-color: #f8d7da; /* Light Red */
-    color: #721c24; /* Dark Red */
-  }
-  
-  /* Card Footer */
-  .card-footer {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-  }
-  
-  .action-button {
-    padding: 8px 15px;
-    font-size: 0.9em;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .action-button.view-details {
-    background-color: #003366; /* UF Blue */
-    color: white;
-  }
-  
-  .action-button.view-details:hover {
-    background-color: #0056b3;
-  }
-  
-  .action-button.withdraw {
-    background-color: #d64933; /* UF Orange */
-    color: white;
-  }
-  
-  .action-button.withdraw:hover {
-    background-color: #b33824;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .status-container {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* General Page Styling */
+.application-status-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header Section */
+.status-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.status-header h1 {
+  font-size: 2rem;
+  color: #004085;
+  margin-bottom: 10px;
+}
+
+.status-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state h2 {
+  font-size: 1.5rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Status Container */
+.status-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Application Card */
+.application-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.application-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Header */
+.card-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.job-title {
+  font-size: 1.2rem;
+  color: #004085;
+  margin-bottom: 5px;
+}
+
+.company-name {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Card Body */
+.card-body p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.card-body strong {
+  color: #333;
+}
+
+/* Status Tag */
+.status-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.status-tag.pending {
+  background-color: #ffeeba;
+  color: #856404;
+}
+
+.status-tag.approved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-tag.rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
