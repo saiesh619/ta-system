@@ -11,32 +11,29 @@ body {
 }
 
 /* Top orange navigation bar */
-.top-nav {
-  background-color: #d6581d;
+.topnav {
+  background-color: #d6581d; /* UF orange */
   color: white;
   padding: 10px 0;
 }
 
-.top-nav-content {
+.topnavcontent {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distribute left and right sections */
+  justify-content: space-between;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.left-section-top {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Space between logo and navigation links */
+  font-family: "Georgia", serif;
 }
 
 .uf-logo-main {
   font-size: 24px;
   font-weight: bold;
-  background-color: #003366;
-  color: white;
+  margin: 0;
   padding: 5px 10px;
+  border-right: 3px solid #f58220;
+  color: white;
+  background-color: #003366;
 }
 
 .main-nav-links {
@@ -49,6 +46,10 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
+}
+
+.main-nav-links a:hover {
+  color: #ffcc00; /* Hover effect */
 }
 
 .right-section-top {
@@ -70,34 +71,12 @@ body {
 /* Secondary white header bar */
 .secondary-nav {
   background-color: white;
-  padding: 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ddd;
-  margin: 0 auto;
-}
-
-.uf-logo {
-  display: flex;
   align-items: center;
-}
-
-.uf-logo h1 {
-  font-size: 18px;
-  color: #003366;
-  font-weight: bold;
-  margin: 0;
-  padding-right: 10px;
-  border-right: 3px solid #f58220;
-}
-
-.uf-logo h2 {
-  font-size: 18px;
-  color: #003366;
-  font-style: italic;
-  margin: 0;
-  padding-left: 10px;
+  border-bottom: 1px solid #ddd;
+  height: 100px;
+  text-align: center;
 }
 
 .nav {
@@ -109,10 +88,15 @@ body {
   color: #003366;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
+}
+
+.nav a:hover {
+  color: #f58220;
 }
 
 /* Main content container */
+
 .container {
   display: flex;
   justify-content: center;
@@ -122,60 +106,53 @@ body {
   gap: 20px;
 }
 
-/* Notice box styling */
-.notice-box {
-  background-color: #fff6d8;
-  border: 1px solid #ffcc00;
-  padding: 20px;
-  font-size: 14px;
-  color: #333;
-  width: 300px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  line-height: 1.5;
-  height: 124px;
-  width: fit-content;
-}
 .main-content {
   display: flex;
-  height: auto;
   width: 100%;
-  flex-direction: row;
+  gap: 20px;
 }
+
 .left-section {
   flex: 2;
-  margin-right: 20px;
-  flex-direction: column;
 }
 
 .right-section {
   flex: 1;
 }
 
-/* Login section styling */
-.login-section {
-  display: flex;
-
-  gap: 20px;
-  height: 124px;
-  width: fit-content;
+/* Notice box styling */
+.notice-box {
+  background-color: #fff6d8; /* Light yellow */
+  border: 1px solid #ffcc00;
+  padding: 20px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.5;
 }
 
+/* Login box styling */
 .login-box {
   padding: 30px;
+  text-align: center;
 }
 
-.login-box form {
-  display: flex;
-  flex-direction: column;
+.login-box h2 {
+  margin-top: 0;
+  color: #003366;
+  width: 100%;
 }
 
 .login-box label {
+  display: block;
   margin-top: 20px;
   font-size: 15px;
   color: #333;
+  text-align: left;
 }
 
 .login-box input {
+  width: 100%;
   padding: 12px;
   margin-top: 8px;
   border: 1px solid #ccc;
@@ -202,21 +179,23 @@ body {
 
 /* Privacy notice styling */
 .privacy-notice {
+  border: 1px solid #ddd;
+  padding: 20px;
   font-size: 13px;
   color: #333;
   background-color: #eef;
-  border: 1px solid #ddd;
-  padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   line-height: 1.6;
 }
 
-/* Footer blue section */
+/* Footer styling */
 .footer {
   background-color: #003366;
   color: white;
   padding: 20px;
   margin-top: 30px;
+  height: 111px;
+  max-height: 111px;
 }
 
 .footer-content {
@@ -234,4 +213,97 @@ body {
   color: white;
 }
 
-/* almost aligned  vaibhav*/
+.password {
+  font-weight: 600;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.footer-bottom {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  height: 695px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows the items to wrap on smaller screens */
+}
+
+.footer-contact-wrap {
+  flex: 1;
+  min-width: 250px; /* To make it responsive */
+}
+
+.footer-contact-wrap .social-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.footer-contact-wrap .social-nav li {
+  margin-bottom: 10px;
+}
+
+.footer-contact-wrap .address {
+  margin-top: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  flex: 3;
+  flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+  gap: 20px;
+}
+
+.footer-menu {
+  flex: 1 1 30%; /* Flex-grow, flex-shrink, and flex-basis to make 3 equal columns */
+  min-width: 200px; /* Minimum width to prevent columns from getting too small */
+}
+
+.footer-menu h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu ul li {
+  margin-bottom: 10px;
+}
+
+.footer-menu ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column; /* Stack columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-contact-wrap,
+  .footer-columns {
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,137 @@
+/* General Reset */
+header {
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+  background-color: #d6581d; /* UF orange */
+  color: white;
+  padding: 10px 20px;
+}
+
+.top-nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: "Georgia", serif;
+}
+
+.left-section-top {
+  display: flex;
+  align-items: center;
+}
+
+.uf-logo-main {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.main-nav-links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+.main-nav-links a:hover {
+  color: #ffcc00; /* Accent color */
+}
+
+.right-section-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.welcome-message {
+  font-size: 0.9em;
+}
+
+.dropdown-icon,
+.search-icon {
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+/* Secondary Navigation Bar */
+.secondary-nav {
+  background-color: white;
+  padding: 15px 20px;
+  border-bottom: 2px solid #003366; /* UF blue underline */
+}
+
+.secondary-nav-content {
+  display: flex;
+  justify-content: space-between; /* Align branding and links */
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto; /* Center content */
+}
+
+.uf-logo {
+  text-align: left;
+}
+
+.university-title {
+  margin: 0;
+  font-size: 1.8em;
+  color: #003366; /* UF blue */
+  font-weight: bold;
+}
+
+.ta-system-title {
+  margin: 0;
+  font-size: 1em;
+  color: #666; /* Subtle gray for subtitle */
+}
+
+.nav {
+  display: flex;
+  gap: 20px; /* Add spacing between links */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #003366; /* UF blue */
+  font-size: 1em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d64933; /* UF orange on hover */
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+  .top-nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .secondary-nav-content {
+    flex-direction: column;
+    align-items: flex-start; /* Stack items vertically */
+    gap: 10px; /* Add spacing between sections */
+  }
+
+  .nav {
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px;
+  }
+}
+.university-link {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Keeps the text color as it is */
+}
+
+.university-link:hover {
+  text-decoration: none; /* Ensures no underline appears on hover */
+  cursor: pointer; /* Changes cursor to pointer to indicate interactivity */
+}

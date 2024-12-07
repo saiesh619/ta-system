@@ -1,0 +1,124 @@
+.job-details-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem; /* Increased padding for better spacing */
+  background-color: #ffffff;
+  border-radius: 12px; /* Slightly rounded corners for modern design */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for elegance */
+  font-family: Arial, sans-serif;
+  line-height: 1.6; /* Improved line spacing for readability */
+  color: #333; /* Neutral text color for better contrast */
+}
+
+/* Job Title Styling */
+.job-title {
+  font-size: 2.2rem; /* Slightly larger font for emphasis */
+  margin-bottom: 1.5rem; /* Increased space below */
+  color: #003366; /* Maintains brand color for title */
+  font-weight: bold;
+  text-align: center; /* Centers the job title */
+}
+
+/* General Text Styling */
+.job-field {
+  font-size: 1rem;
+  margin-bottom: 0.75rem; /* Improved spacing between fields */
+  color: #555; /* Lighter color for less visual weight */
+}
+
+.job-description {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.8; /* Increased line spacing for readability */
+  color: #444;
+  padding: 1rem;
+  background-color: #f9f9f9; /* Subtle background for emphasis */
+  border-left: 4px solid #003366; /* Highlighted left border for focus */
+  border-radius: 6px; /* Rounded edges for a modern look */
+}
+
+/* Section Headers */
+.job-section {
+  margin-top: 2rem;
+}
+
+.job-section h2 {
+  font-size: 1.8rem; /* Increased size for visual hierarchy */
+  margin-bottom: 1rem; /* Clear separation from content */
+  color: #003366; /* Consistent brand color */
+  font-weight: bold;
+}
+
+/* Bullet Points */
+.job-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem; /* Adequate padding for spacing */
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Primary Button */
+.primary-button {
+  margin-top: 2rem; /* Increased spacing from content */
+  padding: 0.85rem 2rem; /* Larger padding for better clickability */
+  background-color: #003366;
+  color: white;
+  font-size: 1.1rem; /* Slightly larger text for better readability */
+  border: none;
+  border-radius: 8px; /* Smooth corners for modern style */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for a raised effect */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.primary-button:hover {
+  background-color: #00509e; /* Slightly brighter hover color */
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+.apply-button {
+  display: block;
+  margin: 1rem auto;
+  width: 10rem;
+}
+
+/* Success Message Styling */
+.success-message {
+  margin-top: 1.5rem; /* Increased spacing for better focus */
+  color: #28a745; /* Bright green for success */
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.job-details-container .apply-button:disabled {
+  background-color: #e0f7e9; /* Light green */
+  cursor: not-allowed; /* Keep the cursor style */
+  color: #a2d9b1; /* Optional: Add a matching text color */
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 12rem;
+}
+.view-jobs-button {
+  background-color: #00509e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 15px auto 0;
+  display: block;
+  text-align: center;
+  width: 12rem;
+}
+
+.view-jobs-button:hover {
+  background-color: #00509e;
+  transform: scale(1.05);
+  width: 12rem;
+}
