@@ -3,4 +3,5 @@ This is essentially a job application portal which is focussed on reducing 'cogn
 2) Filtering of only relevant jobs using 'job match crtieria'
 3) Chatbot which answers FAQ and allows the user to give feedback which can be used by developers to further enhance the system
 
+Link to project report(contains detailed HCI analysis of project)  : https://drive.google.com/file/d/1OEqKIQL9hpxELKJ-WBlMmv9Qsc8QRZo2/view?usp=sharing
 Group Demo Video : https://drive.google.com/file/d/17lXZhIvTuEpNk01x0MtEDgzARytJ4s6J/view?usp=sharing
